@@ -135,3 +135,55 @@ function capital(arr) {
 }
 
 capital(arr);
+
+/*find the Highest price object*/
+// const data = {
+//   name: "Brunello Cucinelli",
+//   shoes: [
+//     {name: "black low-top", price: 1000},
+//     {name: "green low-top", price: 1100},
+//     {name: "beige low-top", price: 950},
+//     {name: "olive low-top", price: 1050}
+//   ]
+// };
+
+// function getPriceMax(data) {
+//   let priceMax = data.shoes[0];
+
+//   for(let i = 1; i < data.shoes.length; i++) {
+//     if(data.shoes[i].price > priceMax.price) {
+//       priceMax = data.shoes[i];
+//     }
+//   }
+//   return priceMax;
+// }
+
+// getPriceMax(data);
+
+/*
+url: http://learn.seytech.co/courses/practice/algorithms
+1: Find the Highest Value in a given array
+loop & sort
+*/
+const arr = [3,5,2,1,6,9];
+
+function findMax(arr) {
+  let max = arr[0];
+
+  for(let i = 0; i < arr.length; i++) {
+    if(max < arr[i]) {
+      max = arr[i]
+    }
+  }
+  return max;
+}
+
+findMax(arr);
+
+function findMaxSort(arr) {
+  arr.sort();
+
+  return arr[arr.length - 1];
+}
+
+findMaxSort(arr);
